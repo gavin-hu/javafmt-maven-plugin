@@ -33,12 +33,10 @@
         <connection>scm:git:git@github.com:gavin-hu/javafmt-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:gavin-hu/javafmt-maven-plugin.git</developerConnection>
         <url>https://github.com/gavin-hu/javafmt-maven-plugin</url>
-      <tag>javafmt-maven-plugin-1.0.0</tag>
-  </scm>
+        <tag>javafmt-maven-plugin-1.0.0</tag>
+    </scm>
 
     <properties>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
