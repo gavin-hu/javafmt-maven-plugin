@@ -127,11 +127,14 @@ public class JavaFormatterMojo extends AbstractMojo {
             IRegion region = javaDoc.getLineInformation(lineNumber);
             String line = javaDoc.get(region.getOffset(), region.getLength());
             //
-            if (lineNumber >= firstImportCount && lineNumber <= lastImportCount) {
+            if (firstImportCount < lastImportCount &&
+                    lineNumber >= firstImportCount &&
+                    lineNumber <= lastImportCount) {
                 continue;
             }
             //
-            if (lineNumber == lastImportCount + 1) {
+            if (firstImportCount < lastImportCount &&
+                    lineNumber == lastImportCount + 1) {
                 javaCodeBuilder.append(javaImports);
             }
             javaCodeBuilder.append(line).append(LINE_ENDING_CRLF_CHARS);

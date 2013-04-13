@@ -4,17 +4,17 @@
 
     <groupId>javafmt-maven-plugin</groupId>
     <artifactId>javafmt-maven-plugin</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>Java Formatter Maven Plugin</name>
     <url>https://github.com/gavin-hu/javafmt-maven-plugin</url>
+    <inceptionYear>2013</inceptionYear>
 
     <organization>
         <name>FocusSNS</name>
         <url>http://www.focusns.org</url>
     </organization>
-    <inceptionYear>2013</inceptionYear>
 
     <developers>
         <developer>
@@ -34,6 +34,15 @@
         <developerConnection>scm:git:git@github.com:gavin-hu/javafmt-maven-plugin.git</developerConnection>
         <url>https://github.com/gavin-hu/javafmt-maven-plugin</url>
     </scm>
+    <repositories>
+        <repository>
+            <id>mvn-repo</id>
+            <url>https://github.com/gavin-hu/mvn-repo/raw/master/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -150,4 +159,20 @@
             <version>3.6.1</version>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>internal.repo</id>
+            <distributionManagement>
+                <repository>
+                    <id>mvn-repo</id>
+                    <url>file:/E:/repository/mvn-repo/releases</url>
+                </repository>
+                <snapshotRepository>
+                    <id>mvn-repo</id>
+                    <url>file:/E:/repository/mvn-repo/snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 </project>

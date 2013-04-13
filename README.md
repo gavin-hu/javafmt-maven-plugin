@@ -1,4 +1,5 @@
-javafmt-maven-plugin
+# Javafmt Maven Plugin
 ====================
 
-Format Java Code by Eclipse Code Formatter
+1. Organize Imports
+2. Format Java Code by Eclipse Code Formatter 
