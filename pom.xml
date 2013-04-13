@@ -27,8 +27,8 @@
     </developers>
     <licenses>
         <license>
-            <name>The GNU Lesser General Public License, version 2.1</name>
-            <url>http://opensource.org/licenses/LGPL-2.1</url>
+            <name>Apache License, Version 2.0</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
         </license>
     </licenses>
     <scm>
@@ -65,7 +65,7 @@
                 <artifactId>license-maven-plugin</artifactId>
                 <version>1.4</version>
                 <configuration>
-                    <licenseName>lgpl_v2_1</licenseName>
+                    <licenseName>apache_v2</licenseName>
                     <roots>
                         <root>src/main/java</root>
                         <root>src/test/java</root>
