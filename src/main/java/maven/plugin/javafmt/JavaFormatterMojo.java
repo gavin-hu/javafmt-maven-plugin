@@ -44,7 +44,7 @@ import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IRegion;
 import org.eclipse.text.edits.TextEdit;
 
-@Mojo(name = "format", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
+@Mojo(name = "format", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
 public class JavaFormatterMojo extends AbstractMojo {
     private static final String LINE_ENDING_CRLF_CHARS = "\r\n";
     @Parameter(property = "basedir")
