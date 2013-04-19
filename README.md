@@ -19,7 +19,7 @@
 <plugin>
     <groupId>javafmt-maven-plugin</groupId>
     <artifactId>javafmt-maven-plugin</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <executions>
         <execution>
             <id>java-format</id>
