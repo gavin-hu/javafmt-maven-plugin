@@ -4,7 +4,7 @@
 
     <groupId>javafmt-maven-plugin</groupId>
     <artifactId>javafmt-maven-plugin</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>maven-plugin</packaging>
 
     <name>Java Formatter Maven Plugin</name>
@@ -33,7 +33,8 @@
         <connection>scm:git:git@github.com:gavin-hu/javafmt-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:gavin-hu/javafmt-maven-plugin.git</developerConnection>
         <url>https://github.com/gavin-hu/javafmt-maven-plugin</url>
-    </scm>
+      <tag>javafmt-maven-plugin-1.0.2</tag>
+  </scm>
     <repositories>
         <repository>
             <id>mvn-repo</id>
