@@ -50,7 +50,8 @@ public class JavaCodeStyle extends HashMap<String, String> {
         loadStyle(inputStream);
     }
 
-    private void loadStyle(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
+    private void loadStyle(InputStream inputStream) throws ParserConfigurationException, IOException, SAXException,
+            XPathExpressionException {
         XPath xPath = xPathFactory.newXPath();
         XPathExpression expression = xPath.compile("//profile/setting");
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inputStream);
