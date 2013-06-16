@@ -49,7 +49,7 @@ import org.eclipse.text.edits.TextEdit;
 
 @Mojo(name = "format", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
 public class JavaFormatterMojo extends AbstractMojo {
-    private static final String LINE_ENDING_CRLF_CHARS = "\r\n";
+    private static final String LINE_ENDING_LF_CHARS = "\n";
     //
     private Properties status = new Properties();
     //
@@ -114,6 +114,9 @@ public class JavaFormatterMojo extends AbstractMojo {
         File statusFile = new File(basedir, "target/javafmt-maven-plugin.properties");
         if (!statusFile.exists()) {
             //
+            if(!statusFile.getParentFile().exists()) {
+                statusFile.getParentFile().mkdirs();
+            }
             statusFile.createNewFile();
         }
         //
@@ -188,7 +191,7 @@ public class JavaFormatterMojo extends AbstractMojo {
             if (firstImportCount < lastImportCount && lineNumber == lastImportCount + 1) {
                 javaCodeBuilder.append(javaImports);
             }
-            javaCodeBuilder.append(line).append(LINE_ENDING_CRLF_CHARS);
+            javaCodeBuilder.append(line).append(LINE_ENDING_LF_CHARS);
         }
         //
         javaDoc.set(javaCodeBuilder.toString());
@@ -201,7 +204,7 @@ public class JavaFormatterMojo extends AbstractMojo {
         String javaCode = javaDoc.get();
         int kind = CodeFormatter.K_COMPILATION_UNIT + CodeFormatter.F_INCLUDE_COMMENTS;
         //
-        TextEdit textEdit = codeFormatter.format(kind, javaCode, 0, javaCode.length(), 0, LINE_ENDING_CRLF_CHARS);
+        TextEdit textEdit = codeFormatter.format(kind, javaCode, 0, javaCode.length(), 0, LINE_ENDING_LF_CHARS);
         //
         textEdit.apply(javaDoc);
         //
